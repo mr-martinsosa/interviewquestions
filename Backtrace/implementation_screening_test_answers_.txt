@@ -1,0 +1,82 @@
+##
+# Backtrace I/O Implementation Engineer Screening
+#   Please place your answer to each question below (example below). Assume that
+#   your answers will be running on a system running Linux. You're welcome to
+#   use any command built in functions in sh and any of the following #
+#   command line tools in your answers unless you are explicitly asked to write the
+#   solution in a specific language.
+#   	sed
+#   	awk
+#   	grep
+#   	find
+#   	ls
+#
+##
+
+##
+# Question 1:
+# I receive the following error when I'm trying to run `coroner summary`:
+#   backtracesetup@localhost:~$ coroner summary
+#   coroner: command not found
+#
+# I've verified that the proper packages are installed.
+# How do I find the path where coroner was installed?
+# How do I make it so that this path is searched for when trying to execute
+#  programs?
+#
+# Answer 1: 
+# Coroner's path can be found using the `which` keyword. The path can be searched
+# by adding the path name to the PATH environmental variable and running `PATH=$PATH: /path/to/coroner`
+# where `/path/to/coroner` is the path itself.
+# Another method is to add the path to the `.bash_profile` file 
+# and using `source ~/.bash_profile` command when referencing it.
+##
+
+##
+# Question 2:
+# Now that we have `coroner summary` working, I want to see what files it is trying to open.
+# What utility can I use to trace this command and see what files it is trying to open?
+# 
+# Answer 2:
+# Using the utility command `strace /path/to/coroner summary`,
+# one can see the files `coroner summary` is trying to open. 
+##
+
+##
+# Question 3:
+# What command can I use to determine which ports a process has open? As an example
+# what command can I run to see which ports the `coronerd` process has open? 
+#
+# Answer 3:
+# First, one must run `ps ax` to obtain the pid of the `coronerd` process.
+# Then using the command `netstat -aop | grep "pid"` (where pid is the process id) 
+# as a root user, it will return the ports used as well as a variety of network statistics.
+## 
+
+##
+# Question 4: 
+# Write a program, in the language of your choice, that prints out the next 20 leap years. 
+##
+
+##
+# Answer 4: 
+def leapYear():
+    x = 0
+    try:
+        year = int(raw_input("Please input the year to begin, leave empty to default to (2016): "))
+    except ValueError:
+        year = 2016
+    while x < 20:
+        if year % 4 != 0 and year % 400 != 0:
+            year +=1
+        elif year % 100 != 0:
+            year +=1
+            print("%s is a leap year") % (year)
+            x += 1
+
+
+leapYear()      
+#
+##
+
+

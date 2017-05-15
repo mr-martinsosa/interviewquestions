@@ -1,0 +1,54 @@
+Catchpoint offers 3 services or products:
+
+-Synthetic: Monitoring and managing service that shows information in real-time to pinpoint issues in order to resolve them before they affect the users. Fast troubleshooting is allowed with clear and visible metrics.
+Uses up to 14 different monitor types to collect data
+Website, Transaction, Moile, DNS, API, Websocket, Tracerout, Ping, Streaming, HTML Code, FTP, SMTP, TCP, SSH
+The difference between Synthetic and OnPrem is that the client using OnPrem can test off their own premesis and test upcoming features or code
+Synthetic tests all over the world vs OnPrem is for your current location (or premesis lol)
+preemptively figure out issues by testing vital aspects user paths and individual components from specific locations
+Over 500 nodes (Backbone, mobile, last mile) dispersed for network coverage
+Diverse mix of ISPs
+
+-Glimpse: Service that provides metrics on what the users are doing and any problems they encountered while using the service. Uses features that combine real user measurements and dashboards and metrics to see how traffic is being handled and what exactly is going on between user and service.
+Uses RUM( Real User Management) and using a form of testing known as AB testing, one can compare real time data with testing data. 
+Why would someone want to use Glimpse?
+can see where bottlenecks are, can use user data to fix any problems that are currently going on
+use Luke Cage example with Netflix how they could have used Glimpse to notice or predict downtime that could have happened based on how many users were currently on Netflix
+Ensures users are constently experiencing optimal speed by analyzing down to city level
+Measure the impact and result of a new site change, release or modification on infrastructure based on previous data
+Highly configurable and easily deployable
+
+-OnPrem Agent: 24/7 Monitoring that allows one to detect performance issues before users are impacted. It is supported with small hardware, servers or virtual machines within the premises of the user. 
+Uses up to 15 monitoring types
+manage complexities such as cloud provides, SaaS provides and ISPs.
+Preempt issues such as packet loss and latency
+Reduce Troubleshooting costs
+
+394 Backbone nodes -> ISP (located in tier 1 data centers and ISPs)
+63 Last Mile Nodes -> test node -> users home (Last Mile nodes installed on dedicated machines)
+35 Wireless Nodes -> wireless (each node connects to multiple carriers)
+
+Monitor First Mile within datacenter with OnPrem Agent
+
+
+Dyn suffered major DDOS attack, many web properties and services were down.
+Dyn nameservers were not responding to DNS queries for more than 4 seconds
+
+Fix: introduced secondary managed DNS provider Verisign to bring back site and a back up domain that was not on Dyn so customers can login and watch their own services, these were on standby before DDOS
+Nodes could not talk to systems until they were forced into an IP only mode to skip the DNS, a feature made by catchpoint but was not active yet.
+
+Global fix: Need multiple DNS providers, need knowledge base articles to spread this info.
+Make it easier to migrate incase of situations like this.
+
+
+Measuring perceived performance
+
+Etsy uses Render Start time and Speed Index in syntehtic and load times in RUM
+Netflix uses domInteractive from the Navigation Timing API, but that can be problematic
+Facebook uses time to interact to indicate when user first interacted
+Standard is hard because websites and apps are different in nature and how they are constructed
+
+Fix? Map values of loading to common names since measurements boil down to common goals
+
+
+

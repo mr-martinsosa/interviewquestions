@@ -1,0 +1,40 @@
+Create ListenFirst_Programming Test_LibraryAPI
+Test Information
+You have three hours to complete this programming test which consists of one problem.
+
+If possible, please use Ruby, C/C++, Java or Python (in our order of preference) for your implementation.  
+If you use C++ it must compile in a Unix/Linux environment.  The problem is very generic so you should not link any esoteric libraries.  
+If you're programming in a MS environment, use standard libraries for I/O.  
+Make sure the test administrator will not have any problems building your code with your makefile.  
+When you are finished, tar up your entire submission including source code, makefiles, data, etc. and email it back to your test administrator.
+
+First and foremost, the results of your implementation must be correct.  
+However, coding style and the elegance of your solution from a software engineering perspective will also be considered.  
+Finally, commented code is highly recommended.
+Dictionary/Thesaurus
+Implement a data structure to provide dictionary and thesaurus functionality.  
+The dictionary should consist of unique words where each word has exactly one meaning.  
+Each word may have any number of synonyms.  Provide an application which uses this data structure.  
+The method of I/O is up to you.  Prompting for user input or scanning from a file is probably the quickest method.  
+The emphasis is on the data structure.
+
+The following operations should be supported:
+Add a word and its meaning to the dictionary.
+Add a synonym to a word in the dictionary. Both the synonym and the word should already be present in the dictionary.
+Look up the meaning of a word from the dictionary.
+Look up the synonyms of a word from the dictionary.
+In addition, synonyms should be considered both commutative and transitive. For clarity:
+commutative - associations are reversible; if beautiful is a synonym of gorgeous, then gorgeous is also a synonym of beautiful
+transitive - associations are transferable; if beautiful is synonymous with gorgeous and gorgeous is synonymous with lovely, then beautiful is synonymous with lovely
+Suggestions:
+Structure the main functionality which solves the problem as a library.  Provide a driver program (main) which performs all I/O and calls your library's API.
+ Design the data structure(s) first.
+
+
+
+Encompass the dictionaries in a class, add a function with takes word, 
+definition and list of synonyms and do the work inside
+
+So a library can consist of a class that solves this problem
+Simple class for dictionary. Then a main to handle it
+Need to handle inserts and matching words. 

@@ -1,0 +1,40 @@
+﻿HTML 
+•	How does an image get put on an html page? What is the syntax? 
+The <img> tag is used to define an image on an html page. Images are linked, not inserted into HTML pages.
+<img src=”filename.ext” alt=”texthere”>
+Can add sizes height and width if need be. 
+•	What is an anchor tag, or how is an anchor tag used? 
+<a> An anchor tag is used to attach a URL to text on a web page. Clicking the text will allow a user to visit the URL attached to the text.
+•	How does an HTML page load?  What is the sequence?
+An HTML page loads in the following order:
+It gets downloaded, then parsed. It goes through the lines until reaches a <script src> tag, which it downloads and parses and run. It continues until it reaches a  <link href> tag to a css file and downloads and parses that. Afterwards, it reaches a <style> tag which defines the internal CSS rules and it is parsed and definied. Right after the <style> tag is usually a <script> tag to load internal Javascript. Finally any <img src> tags are downloaded and displayed and parsing ends.
+In general, HTML is parsed progressively, whatever it reaches a request for an asset, it attempt to download the asset.
+
+JavaScript 
+•	Name 4 of the six basic types of values in JavaScript.
+String, Array, var, null, object, bool
+•	What is the order of precedence for operators (keeping in mind that you can always use parentheses when in doubt)? 
+The order of precedence is used to evaluate expressions in a proper order, usually with function calls and accessing fields leading the order and decreasing in order with data types, multiplication, addition/subtraction, then logical comparisons.
+Parentheses are used to alter the order of precedence by allowing whatever is inside the parentheses to be evaluated first.
+
+Web Technologies 
+•	How would you describe google analytics? How does it work? How do you implement it?  
+A free web analytics service provided by Google that tracks and reports website traffic. It works by including a block of JavaScript code on webpages which references a file that executes a tracking operation for analytics. 
+•	Explain what a web spider is and what it does. What business might use one? 
+A web spider/crawler is a program or script that browses the Internet in an automated manner. It can be used as a means to provide up to date data. A business in web searches would use many web crawlers to scan for related pages in searches. A business could also use it for scraping specific data off websites for analytics.
+
+Network Related 
+•	In simple terms, what does DNS do? Describe the process.
+They maintain a directory of domain names and translate them to IP addresses. It works by translating the domain name an ISP uses into a machine friendly IP address and it directs your connection to the correct website.  
+•	How does a TCP connection get established?  
+A TCP connection is established with a three-way handshake (a series of messages). First, the open is established by the client by sending a SYN (synchronize) to the server. The server responds with a SYN-ACK. The client sends the ACK back to the server and a connection is established.
+•	What is the benefit of a CDN 
+A CDN works by providing alternative server nodes for users to download resources such as images and JavaScript. These nodes are all over the world, so because they are closer to users, they ensure faster response and download time due to reduced latency.
+
+Before your next call, you should do the following: 
+•	Check out this page. Know what it is. http://www.webpagetest.org
+•	Read our blogs - http://blog.catchpoint.com/
+•	Find out what Catchpoint does and how we do it. 
+•	Study the interview questions, if you didn't know the answers, please research them. 
+
+Check this out and do some in-depth research – It’s focused  a lot on what our products do to limit issues.http://stevesouders.com/hpws/rules.php
